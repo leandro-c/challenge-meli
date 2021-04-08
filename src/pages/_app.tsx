@@ -1,7 +1,7 @@
-import React from 'react'
-import { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import { ChakraProvider, Stack, Image, Input, IconButton } from '@chakra-ui/react'
+import React from 'react';
+import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import { ChakraProvider, Stack, Image, Input, IconButton } from '@chakra-ui/react';
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
