@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ChakraProvider>
       <Stack backgroundColor="#ededed" height="100%" minHeight="100vh">
-        <Stack backgroundColor="#fff159" direction="row" padding={4} spacing={6}>
+        <Stack backgroundColor="#fff159" direction="row" pl={20} pr={20} pt={4} pb={4} spacing={6}>
           <div style={{ width: 40 }}>
             <Image src="/Logo_ML.png" />
           </div>
