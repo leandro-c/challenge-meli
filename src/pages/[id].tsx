@@ -14,10 +14,10 @@ const IndexPage: React.FC<Props> = ({ result }) => {
         <Box padding={4}>
             <Center>
                 <Stack width="90%" backgroundColor="white" borderRadius={2} boxShadow="sm" padding={4}>
-                    <Stack justifyContent="space-between" direction={{ base: "column", sm: "row" }}>
-                        <Stack >
+                    <Stack padding={5} justifyContent="space-between" direction={{ base: "column", sm: "row" }}>
+                        <Stack>
                             <Image src={result.image} height={300} width={300} />
-                            <Text fontSize="xl" fontWeight="bold" direction={{ base: "column", sm: "row" }}>Descripcion del producto</Text>
+                            <Text pt={100} pb={5} fontSize="xl" fontWeight="bold" direction={{ base: "column", sm: "row" }}>Descripcion del producto</Text>
                             <Text color="rgb(154, 154, 154)" direction={{ base: "column", sm: "row" }}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 In velit lacus, tincidunt a dignissim ac, facilisis sed massa. Vestibulum justo diam, tincidunt at augue nec, ultricies tempor nisl.
