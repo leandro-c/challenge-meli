@@ -20,7 +20,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           </div>
           <form style={{ width: "100%" }} onSubmit={handleSubmit}>
             <Stack direction="row" width="100%" spacing={0}>
-              <Input backgroundColor="white" name="query" roundedRight={0} />
+              <Input placeholder="Nunca dejes de buscar" backgroundColor="white" name="query" roundedRight={0} />
               <IconButton
                 aria-label="Search database"
                 icon={<img src="/search.svg" />}
