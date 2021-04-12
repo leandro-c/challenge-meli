@@ -4,12 +4,17 @@ import api from '../product/api';
 import { Product } from '../product/types';
 import { Box, Stack, Text, Center } from '@chakra-ui/react';
 import Link from 'next/link';
+import Error from 'next/error';
 
 interface Props {
     results: Product[];
 }
 
-const IndexPage: React.FC<Props> = ({ results }) => {
+const IndexPage: React.FC<Props> = ({ results, error }) => {
+
+    if(error){
+        return <Error statusCode={500}/>
+    }
 
     return (
         <Box padding={4}>
@@ -53,13 +58,21 @@ const IndexPage: React.FC<Props> = ({ results }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-    const results = await api.search((query.q as string));
 
-    return {
-        props: {
-            results
+    try {
+        const results = await api.search((query.q as string));
+        return {
+            props: {
+                results
+            }
+        };
+    } catch (error) {
+        return {
+            props:{
+                error: true
+            }
         }
-    };
+    }
 };
 
 export default IndexPage;
